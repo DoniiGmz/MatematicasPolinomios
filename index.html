@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Inecuaciones</title>
+    <style>
+
+        .equation {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .step {
+            font-size: 1.2em;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #error {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #ff80ab;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <div class="banner">
+                <img src="Logo.png" alt="Fe y Alegría Logo" class="logo">
+                <h1>Fe y Alegría Caroni</h1>
+                <p>Matemática 2do año</p>
+                <p>Docente: Adonis Gómez</p>
+            </div>
+        </header>
+        <section class="intro">
+            <h2>Bienvenidos a la clase de Polinomios</h2>
+            <p>En esta sesión, exploraremos los polinomios, aprenderemos qué son, cómo hacer operaciones con ellos y practicaremos con ejercicios interactivos.</p>
+        </section>
+        <div class="container">
+            <main>
+                <h2>Lectura del día: El Bosque de las Formas Mágicas</h2>
+                <img src="image.png" alt="Descripción de la imagen" style="float: left; margin-right: 10px; max-width: 300px; height: auto;">
+                <p>En un hermoso bosque llamado <b>El Bosque de las Formas Mágicas</b>, vivían criaturas encantadoras que representaban diferentes formas. Entre ellas, había tres amigos muy especiales: <b>Poli, Nomo y Tino</b>.</p>
+                <p>Poli era una criatura alegre que siempre tenía una nueva idea, y su forma cambiaba de acuerdo con sus pensamientos. Un día, mientras exploraban el bosque, Poli dijo: "¡Quiero hacer una gran fiesta para todos los amigos del bosque! Pero necesito ayuda para organizarla".</p>
+                <p>Nomo, que siempre estaba listo para ayudar, sugirió: "Podemos sumar nuestras ideas. ¿Qué te parece si traemos algo de cada uno?".</p>
+                <p>Tino, que era un poco más reservado, dijo: "Yo puedo traer frutas de los árboles. ¡Serán un gran aporte a la fiesta!".</p>
+                <p>Poli sonrió y dijo: "¡Perfecto! Yo traeré flores de colores. ¡Serán muy bonitas para decorar!". Así, juntos decidieron combinar sus ideas para hacer la mejor fiesta del bosque.</p>
+                <p>Cuando llegaron a la celebración, se dieron cuenta de que todos en el bosque estaban traendo algo especial. Las criaturas, al ver la colaboración de Poli, Nomo y Tino, empezaron a aportar lo que podían: algunos traían dulces, otros, música, y otros, juegos divertidos.</p>
+                <p>Pronto, se formó un gran banquete lleno de colores, sabores y risas. Cada contribución se unía a las de los demás, creando una atmósfera mágica que hacía que la fiesta fuera única.</p>
+                <p>La reina del bosque, <b>Sra. Flora</b>Sra. Flora, se acercó y dijo: "¡Qué maravilla han creado juntos! Cada uno de ustedes ha aportado algo especial y juntos han formado algo aún más grande. Así es como funcionan las combinaciones en este bosque. Al unir nuestras ideas y talentos, creamos algo maravilloso".</p>
+                <p>Los amigos se sintieron felices al darse cuenta de que, al igual que en la fiesta, en el mundo de las formas mágicas, cada contribución se unía para formar algo nuevo. Comprendieron que, aunque eran diferentes, al trabajar juntos podían crear maravillas.</p>
+                <p>Desde aquel día, Poli, Nomo y Tino siguieron explorando y organizando más fiestas, siempre recordando que la unión de sus ideas y formas era la clave para crear algo extraordinario.</p>
+                <p>Y así, en el Bosque de las Formas Mágicas, aprendieron que cada uno tenía su propio lugar y que, al combinarse, podían hacer del mundo un lugar más bello y divertido. ¡Fin!</p>
+                
+
+                <section id="introduccion">
+                    <h2>Introducción a los Polinomios</h2>
+                    <p>Los polinomios son expresiones algebraicas formadas por la combinación de variables, coeficientes y exponentes. La palabra "polinomio" proviene del griego: "poli-" significa "muchos" y "nomio" se traduce como "término". Esto refleja que un polinomio está compuesto por varios términos. Los polinomios son fundamentales en el álgebra, ya que se utilizan para modelar y resolver problemas en diversas áreas de las matemáticas y las ciencias aplicadas, como la física y la economía.</p>
+                    
+                    <p>Los polinomios pueden ser simples o complejos, y su estudio permite entender conceptos más avanzados como funciones, ecuaciones y sistemas. Aprender a trabajar con polinomios es esencial para resolver problemas matemáticos y aplicar técnicas algebraicas en situaciones de la vida cotidiana.</p>
+                    
+                    <p>Ejemplo: Un ejemplo sencillo de un polinomio es <strong>P(x) = 2x<sup>2</sup> + 3x + 4</strong>. En este caso, <strong>2x<sup>2</sup></strong>, <strong>3x</strong> y <strong>4</strong> son términos del polinomio, donde <strong>2</strong>, <strong>3</strong>, y <strong>4</strong> son los coeficientes y los exponentes son <strong>2</strong>, <strong>1</strong> y <strong>0</strong> respectivamente.</p>
+
+                </section>
+                
+                <section id="que-es-un-polinomio">
+                    <h2>¿Qué es un Polinomio?</h2>
+                    <p>Un polinomio es una expresión algebraica de la forma:</p>
+                    <p><strong>P(x) = a<sub>n</sub>x<sup>n</sup> + a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>1</sub>x + a<sub>0</sub></strong></p>
+                    <p>donde:</p>
+                    <ul>
+                        <li><strong>P(x)</strong> es el polinomio.</li>
+                        <li><strong>x</strong> es la variable (también llamada incógnita).</li>
+                        <li><strong>a<sub>n</sub>, a<sub>n-1</sub>, ..., a<sub>0</sub></strong> son coeficientes, que pueden ser números reales o complejos.</li>
+                        <li><strong>n</strong> es un número entero no negativo que representa el grado del polinomio, que indica el término con el exponente más alto.</li>
+                    </ul>
+                    <p>Los polinomios pueden tener uno o más términos y pueden incluir operaciones de suma, resta y multiplicación.</p>
+                    
+                    <p>Ejemplo: Consideremos el polinomio <strong>P(x) = 4x<sup>3</sup> - 2x<sup>2</sup> + 5x - 1</strong>:<br>
+                    - El término <strong>4x<sup>3</sup></strong> tiene un coeficiente de <strong>4</strong> y un exponente de <strong>3</strong>.<br>
+                    - El término <strong>-2x<sup>2</sup></strong> tiene un coeficiente de <strong>-2</strong> y un exponente de <strong>2</strong>.<br>
+                    - El término <strong>5x</strong> tiene un coeficiente de <strong>5</strong> y un exponente de <strong>1</strong>.<br>
+                    - El término constante <strong>-1</strong> tiene un coeficiente de <strong>-1</strong> y un exponente de <strong>0</strong>.</p>
+                </section>
+                
+                
+
+                <section id="clasificacion">
+                    <h2>Clasificación de los Polinomios según su Cantidad de Términos</h2>
+                    <p>Los polinomios se pueden clasificar según la cantidad de términos que tienen. Esta clasificación es útil para entender la estructura de los polinomios y cómo operan entre sí. Aquí están las categorías principales:</p>
+                    <ul>
+                        <li><strong>Monomio:</strong> Es un polinomio que consta de un solo término. Ejemplo: <strong>5x<sup>2</sup></strong> o <strong>-3x</strong>.</li>
+                        <li><strong>Binomio:</strong> Es un polinomio que tiene exactamente dos términos. Ejemplo: <strong>2x + 3</strong> o <strong>x<sup>2</sup> - 4x</strong>.</li>
+                        <li><strong>Trinomio:</strong> Es un polinomio que consta de tres términos. Ejemplo: <strong>x<sup>2</sup> + 3x + 2</strong> o <strong>4x<sup>2</sup> - x + 7</strong>.</li>
+                        <li><strong>Polinomio de n términos:</strong> Se refiere a cualquier polinomio que tiene más de tres términos, donde "n" representa la cantidad total de términos. Ejemplo: <strong>2x<sup>3</sup> + 3x<sup>2</sup> - x + 1</strong>. Este sería un Polinomio de 4 términos.</li>
+                    </ul>
+                    
+                    <p>Conocer la clasificación de los polinomios es esencial para realizar operaciones algebraicas y para resolver ecuaciones en las que los polinomios están involucrados.</p>
+                </section>
+                
+                
+                <section id="grados">
+                    <h2>Grados de los Polinomios</h2>
+                    <p>El grado de un polinomio es el mayor exponente de la variable en la expresión. El grado nos ayuda a entender el comportamiento del polinomio y es fundamental para realizar operaciones como la suma, resta y multiplicación de polinomios. Los grados se clasifican de la siguiente manera:</p>
+                    <ul>
+                        <li><strong>Grado 0:</strong> Un monomio donde no hay variable, como <strong>P(x) = 7</strong>.</li>
+                        <li><strong>Grado 1:</strong> Un polinomio lineal, como <strong>P(x) = 2x + 5</strong>.</li>
+                        <li><strong>Grado 2:</strong> Un polinomio cuadrático, como <strong>P(x) = x^2 - 4x + 3</strong>.</li>
+                        <li><strong>Grado 3:</strong> Un polinomio cúbico, como <strong>P(x) = x^3 + 2x^2 - x + 1</strong>.</li>
+                        <li><strong>Grado n:</strong> Un polinomio de grado n tiene un término con un exponente de n, como <strong>P(x) = x^n + ...</strong>.</li>
+                    </ul>
+                    
+                    <p>Por ejemplo, en el polinomio <strong>P(x) = 3x^4 + 2x^3 - x + 7</strong>, el grado es <strong>4</strong> porque el término con el exponente más alto es <strong>3x^4</strong>.</p>
+                    <p>Conocer el grado de un polinomio es crucial para comprender su gráfica, ya que determina la forma y el número de intersecciones con el eje x.</p>
+                    <p>Nota: En futuras clases se explicara a qué se refieren las palabras lineal, cuadrático y cúbico en los Polinomios.</p>
+                </section>
+                
+                <section id="ordenar-polinomios">
+                    <h2>Ordenar Polinomios para Sumarlos o Restarlos</h2>
+                    <p>Para realizar operaciones de suma o resta de polinomios, es esencial ordenar los términos de acuerdo con los grados de sus variables. Esto facilita la identificación de términos semejantes, que son aquellos que tienen la misma variable elevada al mismo exponente.</p>
+                    <p>El proceso de ordenar un polinomio implica:</p>
+                    <ol>
+                        <li>Identificar todos los términos del polinomio.</li>
+                        <li>Clasificar los términos de acuerdo con el grado de sus variables, comenzando desde el grado más alto hasta el más bajo.</li>
+                        <li>Escribir el polinomio en su forma ordenada, lo que significa que el término de mayor grado debe aparecer primero.</li>
+                    </ol>
+                    <p>Ejemplo: Consideremos el polinomio <strong>P(x) = 3x + 5 - 2x<sup>2</sup> + 4x<sup>3</sup> </strong>. Para ordenarlo, seguimos estos pasos:</p>
+                    <ul>
+                        <li>Identificamos los términos: <strong>3x</strong>, <strong>5</strong>, <strong>-2x<sup>2</sup></strong>, <strong>4x<sup>3</sup></strong>.</li>
+                        <li>Clasificamos según los grados: <strong>4x<sup>3</sup></strong> (grado 3), <strong>-2x<sup>2</sup></strong> (grado 2), <strong>3x</strong> (grado 1), y <strong>5</strong> (grado 0).</li>
+                        <li>Escribimos el polinomio ordenado: <strong>P(x) = 4x<sup>3</sup> - 2x<sup>2</sup> + 3x + 5</strong>.</li>
+                    </ul>
+                    <p>Ahora que los términos están ordenados, podemos proceder a sumar o restar polinomios fácilmente.</p>
+                </section>
+                
+                <section id="ejercicios-practica">
+                    <h2>Ejercicios de Práctica de Suma y Resta de Polinomios</h2>
+                    <p>Antes de empezar con los ejercicios, es importante explicar cómo se realizan las operaciones de suma y resta entre polinomios.</p>
+                    
+                    <h3>¿Cómo Sumar Polinomios?</h3>
+                    <p>Para sumar dos o más polinomios, debemos agrupar los términos de igual grado (es decir, los términos que tienen el mismo exponente) y luego sumarlos. Por ejemplo, si sumamos los polinomios:</p>
+                    <p><strong>P(x) = 3x<sup>2</sup> + 5x - 2</strong> y <strong>Q(x) = 2x<sup>2</sup> - 3x + 4</strong>, el procedimiento sería:</p>
+                    <p>1. Agrupamos los términos de igual grado:</p>
+                    <ul>
+                        <li><strong>3x<sup>2</sup></strong> y <strong>2x<sup>2</sup></strong></li>
+                        <li><strong>5x</strong> y <strong>-3x</strong></li>
+                        <li><strong>-2</strong> y <strong>4</strong></li>
+                    </ul>
+                    <p>2. Luego sumamos cada par de términos:</p>
+                    <p><strong>(3x<sup>2</sup> + 2x<sup>2</sup>) + (5x - 3x) + (-2 + 4) = 5x<sup>2</sup> + 2x + 2</strong></p>
+                    
+                    <h3>¿Cómo Restar Polinomios?</h3>
+                    <p>La resta de polinomios sigue un procedimiento similar a la suma, con la diferencia de que restamos los coeficientes de los términos de igual grado. Por ejemplo, si restamos los polinomios:</p>
+                    <p><strong>P(x) = 3x<sup>2</sup> + 5x - 2</strong> y <strong>Q(x) = 2x<sup>2</sup> - 3x + 4</strong>, el procedimiento sería:</p>
+                    <p>1. Agrupamos los términos de igual grado:</p>
+                    <ul>
+                        <li><strong>3x<sup>2</sup></strong> y <strong>2x<sup>2</sup></strong></li>
+                        <li><strong>5x</strong> y <strong>-3x</strong></li>
+                        <li><strong>-2</strong> y <strong>4</strong></li>
+                    </ul>
+                    <p>2. Luego restamos cada par de términos:</p>
+                    <p><strong>(3x<sup>2</sup> - 2x<sup>2</sup>) + (5x - (-3x)) + (-2 - 4) = x<sup>2</sup> + 8x - 6</strong></p>
+                    
+                    <h3>Ejercicios de Práctica</h3>
+                    <p>Ahora que ya sabes cómo sumar y restar polinomios, intenta resolver los siguientes ejercicios:</p>
+                    <ol>
+                        <li>Sumar los polinomios: <strong>4x<sup>2</sup> + 2x - 1</strong> y <strong>3x<sup>2</sup> - 4x + 5</strong>.</li>
+                        <li>Restar los polinomios: <strong>5x<sup>3</sup> + 3x<sup>2</sup> - x + 2</strong> y <strong>2x<sup>3</sup> - x<sup>2</sup> + 4</strong>.</li>
+                        <li>Sumar los polinomios: <strong>x<sup>4</sup> - 3x<sup>3</sup> + 2x<sup>2</sup></strong> y <strong>2x<sup>4</sup> + x<sup>3</sup> - 5x</strong>.</li>
+                    </ol>
+                </section>
+                
+                
+                <section id="imagen-estudiante">
+                    <h2>¡Sigue Estudiando!</h2>
+                    <img src="image2.png" alt="Niño estudiando" style="width: 100%; max-width: 500px;">
+                    <p>¡Estudiar polinomios puede ser divertido! Sigue practicando y pronto serás un experto.</p>
+                </section>
+                
+            
+                    <br><br><br><br><br>
+                    <button id="noMePresiones">No me pulses</button>
+    
+                </section>
+            </main>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        let currentStep = 1;
+        const stepsContainer = document.getElementById("steps-container");
+    
+        document.getElementById("nextStepBtn").addEventListener("click", function () {
+            const error = document.getElementById("error");
+            const message = document.getElementById("message");
+            error.textContent = "";  // Limpiar el mensaje de error
+    
+            if (currentStep === 1) {
+                // Paso 1: Mostrar el siguiente paso
+                stepsContainer.innerHTML += '<div class="equation" id="step2">5x > 20 - 5</div>';
+                currentStep++;
+            } else if (currentStep === 2) {
+                // Paso 2: Realizar la resta
+                stepsContainer.innerHTML += '<div class="equation" id="step3">5x > 15</div>';
+                currentStep++;
+            } else if (currentStep === 3) {
+                // Paso 3: Dividir ambos lados por 5
+                stepsContainer.innerHTML += '<div class="equation" id="step4">x > 15 / 5</div>';
+                currentStep++;
+            } else if (currentStep === 4) {
+                // Paso 4: Mostrar el resultado final
+                stepsContainer.innerHTML += '<div class="equation" id="step5">x > 3</div>';
+                currentStep++;
+            } else if (currentStep === 5) {
+                // Último paso: Mostrar mensaje correcto
+                message.textContent = "¡Correcto! x > 3 es la solución.";
+                document.getElementById("nextStepBtn").style.display = "none"; // Ocultar el botón
+            } else {
+                error.textContent = "Operación no válida, intenta de nuevo.";
+            }
+        });
+    </script>
+    <script>
+        const button = document.getElementById('noMePresiones');
+        const content = document.getElementById('content');
+        const hiddenContent = document.querySelector('.hidden-content');
+
+        button.addEventListener('click', function() {
+            // Ocultar el contenido original
+            content.classList.add('hidden');
+
+            // Crear una nueva capa que caerá
+            const fallingLayer = document.createElement('div');
+            fallingLayer.classList.add('falling');
+            fallingLayer.style.top = '0';
+            fallingLayer.innerHTML = content.innerHTML; // Copiar el contenido original
+            document.body.appendChild(fallingLayer);
+
+            // Mostrar el contenido oculto después de que caiga
+            fallingLayer.addEventListener('animationend', () => {
+                fallingLayer.remove(); // Eliminar la capa caída
+                hiddenContent.style.display = 'block'; // Mostrar contenido oculto
+                hiddenContent.style.opacity = '1'; // Mostrar texto amontonado
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Margen para todos los lados */
+}
+
+header .banner {
+    background: linear-gradient(135deg, #ff4081, #ff80ab, #ffcc80);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+}
+
+header .logo {
+    width: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Añade sombra de texto */
+}
+
+h2 {
+    color: #ff4081;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+ul {
+    font-size: 1.2em;
+}
+
+.content {
+    padding: 20px;
+}
+
+.intro {
+    background-color: #ffcc80;
+    padding: 20px;
+    text-align: center;
+}
+
+#interactive-exercise {
+    background-color: #fff3e0;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Diseño responsivo para móviles, tabletas y computadoras */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p, ul {
+        font-size: 1em;
+    }
+
+    header .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p, ul {
+        font-size: 0.9em;
+    }
+
+    header .logo {
+        width: 70px;
+    }
+
+    .container {
+        padding: 0 10px; /* Reduce el margen lateral en pantallas más pequeñas */
+    }
+}
+
+#noMePresiones {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.falling {
+    position: absolute;
+    width: 100%;
+    animation: fall 1s forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+#content {
+    transition: opacity 1s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.hidden-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+
+
+
